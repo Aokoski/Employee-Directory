@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"dept": "sales",
+		"name": "Bob",
+		"role": "manager"
+	},
+	{
+		"id": 2,
+		"dept": "accounting",
+		"name": "Janet",
+		"role": "manager"
+	},
+	{
+		"id": 3,
+		"dept": "dev",
+		"name": "Zordon",
+		"role": "wizard"
+	},
+	{
+		"id": 4,
+		"dept": "technologies",
+		"name": "Gerard",
+		"role": "advisor"
+	},
+	{
+		"id": 5,
+		"dept": "executive",
+		"name": "susan",
+		"role": "ceo"
+	}
+]
