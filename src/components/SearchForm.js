@@ -9,7 +9,7 @@ function SearchForm(props) {
       <div className="card-body"></div>
       <form>
         <div className="form-group" style={{ padding: '22px' }}>
-          <label htmlFor="search">{props.searchtype} Search</label>
+        <label htmlFor="search">{props.searchtype} Search Users by First Name</label>
           <input
             onChange={props.handleInputChange}
             value={props.value}
@@ -17,13 +17,10 @@ function SearchForm(props) {
             name="search"
             type="text"
             className="form-control"
-            placeholder="Search Employees"
+            placeholder="Search Users"
             id="search"
           />
-          <br />
-          <button onClick={props.handleFormSubmit} className="btn btn-primary">
-            Search by Department
-        </button>
+       
         </div>
       </form>
     </div>

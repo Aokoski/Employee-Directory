@@ -3,25 +3,35 @@ import Container from "./Container";
 import Row from "./Row";
 import Col from "./Col";
 import SearchForm from "./SearchForm";
-import EmployeeInfo from "./EmployeeInfo";
-import EmployeeList from "../data/employees.json";
+import UserInfo from "./UserInfo";
+import UserList from "../data/directory.json";
 
-class EmployeeContainer extends Component {
-  state = {
-    result: [],
-    search: ""
-  };
-
-  // When this component mounts, search for the movie "The Matrix"
-  componentDidMount() {
-    this.searchEmployees();
+class UserContainer extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      result: UserList,
+      search: "",
+    }
+    this.sortBy = this.sortBy.bind(this);
+  }
+  sortBy = (key) => {
+    this.setState({
+      results: UserList.sort((a, b) => (a[key] > b[key]) ? 1 : -1)
+    })
   }
 
-  searchEmployees = () => {
+  componentDidMount() {
+    this.searchUsersFirst();
+  }
+
+
+  searchUsersFirst = () => {
     const searchQuery = this.state.search.trim();
-    const searchResults = EmployeeList.filter((employees) => employees.role === searchQuery);
-    this.setState({ 'result': searchResults });
+    const searchResultsFirst = UserList.filter((user) => user.first === searchQuery);
+    this.setState({ 'result': searchResultsFirst });
   };
+
 
   handleInputChange = event => {
     const value = event.target.value;
@@ -31,31 +41,31 @@ class EmployeeContainer extends Component {
     });
   };
 
-  // When the form is submitted, search the OMDB API for the value of `this.state.search`
+
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchEmployees();
+    this.searchUsersFirst();
   };
 
   render() {
     return (
       <Container>
         <Row>
-          <Col size="md-4" />
-          <Col size="md-4">
+          <Col size="md-12">
             <SearchForm
-              searchtype="role"
               value={this.state.search}
               handleInputChange={this.handleInputChange}
               handleFormSubmit={this.handleFormSubmit}
             />
           </Col>
-          <Col size="md-4" />
         </Row>
         <Row>
           <Col size="md-12">
             <hr />
-            <EmployeeInfo search={this.state.search} />
+            <UserInfo
+              search={this.state.search}
+              sortBy={this.sortBy}
+            />
           </Col>
         </Row>
       </Container >
@@ -63,4 +73,4 @@ class EmployeeContainer extends Component {
   }
 }
 
-export default EmployeeContainer;
+export default UserContainer;

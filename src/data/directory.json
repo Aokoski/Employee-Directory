@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+        "first": "Rupert",
+        "last": "Dillson",
+        "position": "Director",
+        "email": "Rupert.pickle@example.com",
+        "cell": "(625)-245-9070"
+	},
+	{
+		"id": 2,
+        "first": "LaFawnda",
+        "last": "Thomas",
+        "position": "Product Owner",
+        "email": "LaFawnda.Therapy@example.com",
+        "cell": "(414)-577-0876"
+	},
+    {
+		"id": 3,
+        "first": "DaRon",
+        "last": "Davison",
+        "position": "RTE",
+        "email": "DaRon.Davison@example.com",
+        "cell": "(651)-765-7432"
+	},
+	{
+		"id": 4,
+        "first": "Jipple",
+        "last": "McKesson",
+        "position": "Manager",
+        "email": "jiplle.kess@squirrel.com",
+        "cell": "(612)-291-7846"
+	},
+    {
+		"id": 5,
+        "first": "Arieloa",
+        "last": "Jenkins",
+        "position": "Director of Marketing",
+        "email": "arieloa@example.com",
+        "cell": "(784)-467-2459"
+	},
+    {
+		"id": 6,
+        "first": "Soup",
+        "last": "Sandtime",
+        "position": "Marketing Manager",
+        "email": "soup.time@msn.com",
+        "cell": "(864)-358-6785"
+	},
+    {
+		"id": 7,
+        "first": "Letitia",
+        "last": "Walters",
+        "position": "Marketing Assistant",
+        "email": "letitia.walters@example.com",
+        "cell": "(779)-250-0643"
+	},
+    {
+		"id": 8,
+        "first": "Mercutio",
+        "last": "Kwonz",
+        "position": "Office Manager",
+        "email": "mercU@trapzone.com",
+        "cell": "(865)-246-3790"
+	},
+    {
+		"id": 9,
+        "first": "Geort",
+        "last": "Jimenez",
+        "position": "CEO",
+        "email": "jort.jimenez@example.com",
+        "cell": "(612)-935-3678"
+	},
+    {
+		"id": 10,
+        "first": "tron",
+        "last": "lowercase",
+        "position": "CFO",
+        "email": "tron.young@example.com",
+        "cell": "(763)-935-5674"
+	}
+]
